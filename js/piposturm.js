@@ -1,6 +1,6 @@
 console.log("###  PipoSturm");
-partieUn = [
-    "La pédagogie individualisée",
+amour = [
+    "Vos économies risquent de fondre comme neige au soleil si vous cédez à vos impulsions amplifiées par Pluton.",
     "Les pratiques innovantes",
     "La transmission des valeurs",
     "L'analyse de pratiques",
@@ -16,14 +16,14 @@ partieUn = [
 
 ];
 
-partieDeux = [
-    "mange",
+argent = [
+    "Vos économies risquent de fondre comme neige au soleil si vous cédez à vos impulsions amplifiées par Pluton.",
     "lance",
     "sauve"
 ];
 
-partieTrois = [
-    "une crevette",
+sante = [
+    "Vous aurez peut-être besoin de vous gâter un peu sur le plan alimentaire pour vous remonter le moral. Eh bien, allez-y.",
     "un vélo",
     "un élève"
 ];
@@ -32,15 +32,40 @@ partieTrois = [
 const aleatoireNombre = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const aleatoirePhrase = (partieUn, partieDeux, partieTrois) => {   
-    phrase = `${partieUn[aleatoireNombre(0, partieUn.length - 1)]} ${partieDeux[aleatoireNombre(0, partieDeux.length - 1)]} ${partieTrois[aleatoireNombre(0, partieTrois.length - 1)]}`;
+    phrase = [partieUn[aleatoireNombre(0, partieUn.length - 1)], partieDeux[aleatoireNombre(0, partieDeux.length - 1)], partieTrois[aleatoireNombre(0, partieTrois.length - 1)]];
     return phrase;
 };
 
 const plusieursPhrases = n => {
     for(let i=0; i<n; i++){
-        console.log(aleatoirePhrase(partieUn, partieDeux, partieTrois));
+        console.log(aleatoirePhrase(amour, sante, argent));
     }
 };
 
 plusieursPhrases(5);
+
+const getSelectValue = (selectId) => {
+  let selectElmt = document.getElementById(selectId);
+    /**
+     selectElmt.options correspond au tableau des balises <option> du select
+     selectElmt.selectedIndex correspond à l'index du tableau options qui est actuellement sélectionné
+     */
+  return selectElmt.options[selectElmt.selectedIndex].value;
+}
+const validation = document.getElementById("validation");
+const action = () => {
+    let signe = getSelectValue("signe");
+    let reponse = document.getElementById("reponse");
+    rep = aleatoirePhrase(amour, sante, argent)
+    reponse.innerHTML += `<h2> ${signe}</h2>`;
+    reponse.innerHTML += `<h3> Amour</h3>`;
+    reponse.innerHTML += `<p> ${rep[0]}</p>`;
+    reponse.innerHTML += `<h3> Argent</h3>`;
+    reponse.innerHTML += `<p> ${rep[1]}</p>`;
+    reponse.innerHTML += `<h3> Santé</h3>`;
+    reponse.innerHTML += `<p> ${rep[2]}</p>`;
+}
+validation.addEventListener('click', action);
+
+
 
