@@ -1,6 +1,6 @@
 console.log("###  PipoSturm");
 amour = [
-    "Vos économies risquent de fondre comme neige au soleil si vous cédez à vos impulsions amplifiées par Pluton.",
+    "Sous l'égide de Jupiter, le climat conjugal sera marqué de gentillesse, de compréhension, de joie de vivre et d'amours délicates imprégnées de gaieté, de désir de se retrouver à deux sur la même longueur d'onde. Célibataire, vous pourriez, par le biais de votre travail, faire des rencontres qui vous contraindront à modifier certains projets.",
     "Les pratiques innovantes",
     "La transmission des valeurs",
     "L'analyse de pratiques",
