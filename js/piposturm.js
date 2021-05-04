@@ -35,6 +35,7 @@ for(let i=0; i<10; i++){
     console.log("Désolé mais " + phrase(partieUn, partieDeux, partieTrois));
 }
 const bouton = document.getElementById('validation');
+const reset = document.getElementById('reset');
 const action = () => {
     const valeur = document.getElementById('nb').value;
     let divResultat = document.getElementById('resulat');
@@ -47,3 +48,7 @@ const action = () => {
 }
 
 bouton.addEventListener("click", action);
+reset.addEventListener("click",() => {
+    let divResultat = document.getElementById('resulat');
+    divResultat.innerHTML = ""
+})

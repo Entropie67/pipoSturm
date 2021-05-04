@@ -18,6 +18,14 @@ label {
 
 button {
     border-radius: 5px;
+
+}
+
+#reset {
+    background-color: darkred;
+    color: white;
+}
+#validation {
     background-color: darkolivegreen;
     color: white;
 }
