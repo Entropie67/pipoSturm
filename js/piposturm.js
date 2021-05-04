@@ -12,7 +12,8 @@ const partieDeux = [
     "a volé",
     "a mangé",
     "a detruit",
-    "a brulé"
+    "a brulé",
+    "a surgit"
 ]
 const partieTrois = [
     "mon tram",
@@ -33,3 +34,16 @@ const phrase = (a, b, c) => `${a[nombreAleatoire(0, a.length)]} ${b[nombreAleato
 for(let i=0; i<10; i++){
     console.log("Désolé mais " + phrase(partieUn, partieDeux, partieTrois));
 }
+const bouton = document.getElementById('validation');
+const action = () => {
+    const valeur = document.getElementById('nb').value;
+    let divResultat = document.getElementById('resulat');
+    divResultat.innerHTML += `<h2> Mes ${valeur} excuses</h2>`;
+
+    for(let i=0; i<10; i++){
+        divResultat.innerHTML += `<p> <span>${i+1}</span>  ${phrase(partieUn, partieDeux, partieTrois)}</p>`;
+        console.log("Désolé mais " + phrase(partieUn, partieDeux, partieTrois));
+    }
+}
+
+bouton.addEventListener("click", action);

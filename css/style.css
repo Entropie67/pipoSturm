@@ -1,0 +1,31 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+button {
+    border-radius: 5px;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    color: blue;
+}
